@@ -6,9 +6,9 @@ When you have a dataset, you're like a detective trying to understand the "perso
 
 ---
 
-## 📊 Part 1: Where is My Data and How Spread Out Is It?
+**## 📊 Part 1: Where is My Data and How Spread Out Is It?**
 
-### The Mean: Your Data's "Center of Gravity"
+**### The Mean: Your Data's "Center of Gravity"**
 $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$$
 
 **Think of it like this**: If your data points were physical weights on a seesaw, where would you place the fulcrum to balance it perfectly? That's your mean!
@@ -18,9 +18,27 @@ $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$$
 
 **When to trust it**: When your data doesn't have extreme outliers pulling it in one direction.
 
----
+**---**
 
-### Standard Deviation: The "Typical Distance from Home"
+**### The Median: Your Data's "Middle Child"**
+$$\text{Median} = \begin{cases} 
+x_{(n+1)/2} & \text{if } n \text{ is odd} \\
+\frac{x_{n/2} + x_{(n/2)+1}}{2} & \text{if } n \text{ is even}
+\end{cases}$$
+
+**Think of it like this**: Line up all your data points from smallest to largest. The median is the value that sits right in the middle - exactly half the data is below it, half above it.
+
+**Real Example**: Same class scores of 60, 70, 80, 90, 100 → Median = 80
+- But when that student scored 20: 20, 60, 70, 80, 90, 100 → Median = 75
+- Notice how the median barely moved compared to the mean!
+
+**When to trust it**: When you have outliers or skewed data. The median doesn't care about extreme values - it's the "robust" choice.
+
+**Real-world insight**: Median household income is often more meaningful than mean income because a few billionaires can drastically skew the mean upward.
+
+**---**
+
+**### Standard Deviation: The "Typical Distance from Home"**
 $$s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$$
 
 **Think of it like this**: If the mean is "home base," standard deviation tells you how far people typically wander from home.
@@ -34,6 +52,30 @@ $$s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$$
 **Real Example**: Two classes both have mean score 80
 - Class A: scores are 78, 79, 80, 81, 82 (std = 1.6) - everyone close to average
 - Class B: scores are 60, 70, 80, 90, 100 (std = 15.8) - much more spread out
+
+**---**
+
+**### Variance: The "Raw Spread Before Taking Square Root"**
+$$s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2$$
+
+**Think of it like this**: Variance is just standard deviation before we take the square root. It's the "raw" measure of spread.
+
+**Why do we care about variance separately?**
+- **Mathematical convenience**: Variance has nice properties for calculations (it's additive under independence)
+- **Units matter**: Variance is in "squared units" (dollars² if measuring money), while standard deviation is in original units (dollars)
+- **Statistical theory**: Many formulas work more elegantly with variance
+
+**Real Example**: Using Class B from above (60, 70, 80, 90, 100)
+- Variance = 250 (score-points squared)
+- Standard deviation = √250 = 15.8 (score-points)
+
+**Intuitive relationship**: 
+- Variance = "How spread out is my data?" (in squared units)
+- Standard deviation = "How spread out is my data?" (in original units)
+
+**When to use which**:
+- **Use standard deviation** for interpretation and communication (same units as your data)
+- **Use variance** for mathematical calculations and statistical tes
 
 ---
 
