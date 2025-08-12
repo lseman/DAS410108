@@ -6,9 +6,9 @@ When you have a dataset, you're like a detective trying to understand the "perso
 
 ---
 
-**## 📊 Part 1: Where is My Data and How Spread Out Is It?**
+## 📊 Part 1: Where is My Data and How Spread Out Is It?
 
-**### The Mean: Your Data's "Center of Gravity"**
+### The Mean: Your Data's "Center of Gravity"
 $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$$
 
 **Think of it like this**: If your data points were physical weights on a seesaw, where would you place the fulcrum to balance it perfectly? That's your mean!
@@ -18,9 +18,10 @@ $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$$
 
 **When to trust it**: When your data doesn't have extreme outliers pulling it in one direction.
 
-**---**
+---
 
-**### The Median: Your Data's "Middle Child"**
+### The Median: Your Data's "Middle Child"
+
 $$\text{Median} = \begin{cases} 
 x_{(n+1)/2} & \text{if } n \text{ is odd} \\
 \frac{x_{n/2} + x_{(n/2)+1}}{2} & \text{if } n \text{ is even}
@@ -36,9 +37,10 @@ x_{(n+1)/2} & \text{if } n \text{ is odd} \\
 
 **Real-world insight**: Median household income is often more meaningful than mean income because a few billionaires can drastically skew the mean upward.
 
-**---**
+---
 
-**### Standard Deviation: The "Typical Distance from Home"**
+### Standard Deviation: The "Typical Distance from Home"
+
 $$s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$$
 
 **Think of it like this**: If the mean is "home base," standard deviation tells you how far people typically wander from home.
@@ -53,9 +55,10 @@ $$s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$$
 - Class A: scores are 78, 79, 80, 81, 82 (std = 1.6) - everyone close to average
 - Class B: scores are 60, 70, 80, 90, 100 (std = 15.8) - much more spread out
 
-**---**
+---
 
-**### Variance: The "Raw Spread Before Taking Square Root"**
+### Variance: The "Raw Spread Before Taking Square Root"
+
 $$s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2$$
 
 **Think of it like this**: Variance is just standard deviation before we take the square root. It's the "raw" measure of spread.
