@@ -2,6 +2,7 @@
 
 foreMiner is a powerful, extensible data analysis framework that provides automated insights, statistical analysis, and visualization capabilities for complex datasets. Built with parallel processing and modular architecture, foreMiner intelligently determines the most appropriate analysis strategies based on your data characteristics.
 
+![foreMiner](foreminer_diagram.svg)
 ## 🚀 Features
 
 ### Core Analysis Capabilities
